@@ -35,7 +35,7 @@ function Navbar() {
           <div className="md:hidden">
             <DropdownToggleBar />
           </div>
-          <a className="relative  btn-primary hidden md:block" target="_blank" href="https://drive.google.com/file/d/1OTRc9DvJpBaC06H2F6mrvTiWgd6OmHp_/view?usp=drive_link" download>
+          <a className="relative  btn-primary hidden md:block" target="_blank" href="https://drive.google.com/file/d/1ei0hoz8bDobx0kIDmmb-4LPrfLR8tdj3/view?usp=drive_link" download>
             <button >Download CV</button>
 
           </a>
