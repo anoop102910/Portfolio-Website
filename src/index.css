@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-1: #c10c5b;
+}
+
+.font-chelesa {
+  font-family: "Chelsea Market";
+}
+@layer components {
+  body {
+    @apply w-full px-8 bg-radiant overflow-x-hidden text-white -z-50;
+  }
+  *::selection {
+    @apply bg-red-700;
+  }
+
+  .circle {
+    @apply w-8 aspect-square rounded-full bg-yellow-500 shadow-yellow-700 shadow-inner;
+  }
+  .form-input {
+    @apply w-full px-4 py-2 border  rounded-md shadow-md mt-2 text-[0.9rem] bg-transparent;
+  }
+
+  .form-textarea {
+    @apply w-full border-slate-500 rounded-md pl-8 py-3 outline-none mt-2 text-[0.9rem] bg-transparent border;
+  }
+
+  .btn-primary {
+    @apply md:text-sm px-8 py-[0.8rem] rounded-full font-bold bg-secondary-800 hover:bg-secondary-700 transition duration-500 cursor-pointer hover:-rotate-3 hover:hue-rotate-15 hover:scale-105 active:bg-secondary-600;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary-800 px-20 md:px-8 py-3 rounded-md shadow-md hover:bg-secondary-700 transition duration-500 cursor-pointer;
+  }
+
+  html {
+    @apply text-[15px] md:text-[16px] scroll-smooth;
+  }
+
+  .h1-primary {
+    @apply text-5xl md:text-8xl mt-10  selection:bg-red-700;
+  }
+}
+
+.link-liner::after {
+  content: "";
+  width: calc(110%);
+  transform: translateX(-4%);
+  height: 4px;
+  border-radius: 20px;
+  background-color: #dd0f68;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 2000;
+}
+
+@media (min-width: 768px) {
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: inset 0 0 0 6px rgba(255, 255, 255, 0.01);
+  }
+}
+
+
+.btn-primary:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 30px;
+  background-color: rgb(229, 24, 248);
+  background-image: linear-gradient(315deg, #f818da 0%, #f6fc9c 74%);
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+  transition: all 0.3s ease;
+}
+.btn-primary:hover {
+  color: #000;
+}
+.btn-primary:hover:after {
+  top: auto;
+  bottom: 0;
+  height: 100%;
+}
+.btn-primary:active {
+  top: 2px;
+}
