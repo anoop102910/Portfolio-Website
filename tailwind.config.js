@@ -4,7 +4,8 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      font:{
+      fontFamily:{
+        cahuenga:"Cahuenga-Bold",
         pacifico:"Pacifico"
       },
       colors: {

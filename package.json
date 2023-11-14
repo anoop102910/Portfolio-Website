@@ -10,22 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@emotion/react": "^11.11.1",
-    "@emotion/styled": "^11.11.0",
+    "@fontsource/montserrat": "^5.0.15",
     "@fontsource/roboto": "^5.0.8",
-    "@mui/base": "^5.0.0-beta.21",
-    "@mui/icons-material": "^5.14.16",
-    "@mui/material": "^5.14.15",
-    "flowbite": "^2.0.0",
-    "flowbite-react": "^0.6.4",
+    "framer-motion": "^10.16.4",
     "gsap": "^3.12.2",
-    "locomotive-scroll": "^4.1.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.11.0",
-    "three": "^0.158.0",
-    "typeface-pacifico": "^1.1.13",
-    "typeface-roboto": "^1.1.13"
+    "react-icons": "^4.11.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

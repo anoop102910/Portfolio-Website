@@ -6,12 +6,18 @@
   --bg-1: #c10c5b;
 }
 
-.font-chelesa {
-  font-family: "Chelsea Market";
+@font-face {
+  font-family: 'Cahuenga-Bold';
+  src: url('https://assets.website-files.com/632df91dd7c99c0ac992c47b/635817370a217eb16fc1549a_Cahuenga-Bold.woff2') format('woff2');
 }
+
+*{
+  @apply text-stone-300
+}
+
 @layer components {
   body {
-    @apply w-full px-8 bg-radiant overflow-x-hidden text-white -z-50;
+    @apply w-full  bg-radiant overflow-x-hidden text-white -z-50;
   }
   *::selection {
     @apply bg-red-700;

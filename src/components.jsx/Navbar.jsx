@@ -3,15 +3,17 @@ import DropdownToggleBar from "./DropdownToggleBar";
 
 function Navbar() {
   return (
-    <header className="w-full md:px-12 h-[3.7rem] flex items-center rounded-full mt-3 animate-opacity z-[3000]">
+    <header className="mx-auto md:px-12 h-[3.7rem] flex items-center rounded-full mt-3 animate-opacity z-[3000]">
       <div className="flex justify-between items-center w-full ">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-x-4">
-            <h1 className="text-2xl font-extrabold font-roboto">
-              <span className="lg:text-3xl text-purple-400">A</span>noop Singh
-            </h1>
+            <span className="text-2xl font-extrabold font-roboto">
+              <img className="w-10 inline" src="/logo.png" alt="" />
+              <span>noop Singh</span>
+           
+            </span>
           </div>
-          <nav className="ml-20 hidden md:block">
+          <nav className="ml-20 max-sm:hidden">
             <ul className="flex gap-x-16 items-center">
               <li className="relative ">
                 <a className="link-liner" href="#home ">Home</a>

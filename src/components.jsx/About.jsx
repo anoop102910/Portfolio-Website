@@ -1,34 +1,61 @@
-import React from "react";
-import ProfileImage from "../assets/profilee.png"
+import React, { useRef } from "react";
+import ProfileImage from "../assets/profilee.png";
+import { motion, useInView } from "framer-motion";
+const stackData = [
+  {
+    category: "Frontend",
+    items: ["HTML", "CSS", "JavaScript", "React.js"],
+  },
+  {
+    category: "Backend",
+    items: ["Node.js", "Express.js"],
+  },
+  {
+    category: "Database",
+    items: ["MongoDB"],
+  },
+  {
+    category: "CSS Framework",
+    items: ["Tailwind CSS"],
+  },
+];
 function About() {
   return (
     <section id="about" className="md:about w-full mt-32 md:mt-64 relative ">
-      <h1 id="about-heading" className="h1-primary text-center scroll-trigger-top">About me</h1>
-      <div className="flex mt-5 md:mt-20 items-start flex-col md:flex-row">
-        <img id="about-image" className="w-[450px] hidden md:block h-auto scroll-trigger-left" src={ProfileImage} alt="" />
-        <div id="about-para" className="lg:ml-20 md:ml-10 mt-10 text-gray-300 scroll-trigger-right">
-          <p className="">I'm a Computer Science and Engineering student in Jhansi with a passion for web development. I'm well-versed in C++ for data structures and algorithms.</p>
-          <p className="mt-4">
-            In web development, I use HTML, CSS, JavaScript, ReactJS, Node.js, Express.js, and MongoDB. I'm all about efficiency, using Tailwind CSS for styling. I'm on a quest for web development
-            internships to gain valuable experience.
+      <motion.h1 id="about-heading" className="h1-primary text-center scroll-trigger-top">
+        About me
+      </motion.h1>
+      <div className="flex mt-5 md:mt-20 items-start flex-col md:flex-row md:items-center gap-x-20">
+        <motion.img
+          id="about-image"
+          className="w-[400px] hidden md:block h-auto scroll-trigger-left"
+          src={ProfileImage}
+          alt=""
+        />
+        <motion.div
+          id="about-para"
+          className="lg:ml-20 md:ml-10 mt-10 text-gray-300 scroll-trigger-right"
+        >
+          <p>
+            Hello there!{" "}
+            <span>
+              <img className="w-12  inline" src="hi.png" alt="" />
+            </span>{" "}
+            I'm Anoop Singh, a passionate and aspiring web developer{" "}
+            <span>
+              <img className="w-12  inline" src="comp-emoji.png" alt="" />
+            </span>{" "}
+            currently pursuing my B.Tech in Computer Science and Engineering at Bundelkhand
+            Institute of Engineering and Technology in Jhansi
+            <span>
+              <img className="w-12 ml-2  inline" src="college.png" alt="" />
+            </span>{" "}
+            , Uttar Pradesh.
           </p>
-          <h3 className="mt-4 text-xl font-bold">
-            Name : <span className="text-base text-gray-400">Anoop Singh</span>
-          </h3>
-          <h3 className="mt-4 text-xl font-bold">
-            Date of Birth : <span className="text-base text-gray-400">04 August 2004</span>
-          </h3>
-          <h3 className="mt-4 text-xl font-bold">
-            Address : <span className="text-base text-gray-400">Kanpur, Uttar Pradesh</span>
-          </h3>
-          <h3 className="mt-4 text-xl font-bold">
-            Email : <span className="text-base text-gray-400">anoopsingh1729@gmail.com</span>
-          </h3>
-          <h3 className="mt-4 text-xl font-bold">
-            Phone : <span className="text-base text-gray-400">6388175878</span>
-          </h3>
-          <button className="btn-primary mt-10">Contact </button>
-        </div>
+          <button className="btn-primary mt-10">
+            <a href="#contact">Contact</a>{" "}
+          </button>
+        </motion.div>
       </div>
     </section>
   );
