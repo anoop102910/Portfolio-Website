@@ -6,18 +6,13 @@
   --bg-1: #c10c5b;
 }
 
-@font-face {
-  font-family: 'Cahuenga-Bold';
-  src: url('https://assets.website-files.com/632df91dd7c99c0ac992c47b/635817370a217eb16fc1549a_Cahuenga-Bold.woff2') format('woff2');
-}
-
-*{
-  @apply text-stone-300
+* {
+  @apply text-stone-300;
 }
 
 @layer components {
   body {
-    @apply w-full  bg-radiant overflow-x-hidden text-white -z-50;
+    @apply w-full  bg-r1 overflow-x-hidden text-white -z-50;
   }
   *::selection {
     @apply bg-red-700;
@@ -74,6 +69,14 @@
   }
 }
 
+.bg-glass {
+  background: rgba( 119, 167, 218, 0.25 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 15px );
+  -webkit-backdrop-filter: blur( 15px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
 
 .btn-primary:after {
   position: absolute;
@@ -86,7 +89,8 @@
   border-radius: 30px;
   background-color: rgb(229, 24, 248);
   background-image: linear-gradient(315deg, #f818da 0%, #f6fc9c 74%);
-   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1),
+    4px 4px 5px 0px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
 .btn-primary:hover {
@@ -99,4 +103,55 @@
 }
 .btn-primary:active {
   top: 2px;
+}
+
+@keyframes animate-float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-float {
+  animation: animate-float 2s infinite ease-in-out;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes reverse-type {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+.animate-type {
+  animation: typing 1.5s steps(40, end) infinite;
+  animation-delay: 3s;
+  animation: reverse-type 1.5s steps (25, end) infinite;
+}
+
+.animate-type::after {
+  content: "|";
+  display: inline-block;
+  animation: blinkCursor 0.7s infinite alternate;
+}
+
+@keyframes blinkCursor {
+  to {
+    opacity: 0;
+  }
 }

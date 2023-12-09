@@ -19,6 +19,9 @@ function Footer() {
           <AiFillLinkedin color="blue" size={45} />
         </a>
       </div>
+      <div>
+        <img src="lake.svg" className="w-full md:h-[250px] object-cover object-top" alt="" />
+      </div>
     </div>
   );
 }

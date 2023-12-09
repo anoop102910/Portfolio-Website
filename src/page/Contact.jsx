@@ -4,6 +4,9 @@ import { BsTelephone } from "react-icons/bs";
 import { IoLocationOutline } from "react-icons/io5";
 import { IoIosSend } from "react-icons/io";
 import { BsPerson } from "react-icons/bs";
+import Lottie from "lottie-react";
+import animationData from "../assets/message.json"
+import emailjs from '@emailjs/browser';
 
 
 function Contact() {
@@ -11,7 +14,8 @@ function Contact() {
     <div id="contact" className="mt-32 ">
       <h1 className="h1-primary text-center">Contact me</h1>
       <div className="flex justify-between flex-1 mt-10 flex-col lg:flex-row">
-        <Details />
+        <Lottie animationData={animationData} />
+        {/* <Details /> */}
         <MessageForm />
       </div>
     </div>
@@ -46,14 +50,24 @@ function DetailCard({ children, label, value }) {
   );
 }
 function MessageForm() {
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  }
   return (
     <div className="glass-effect mx-auto mt-10 w-full md:w-auto">
       <form className="mx-auto w-full lg:w-[550px]" action="">
         <div className="mt-8 flex gap-10 flex-col lg:flex-row">
-          <Input label={"Full Name*"} placeholder={"Enter Your name"} className={"mt-4"}>
+          <Input type="number" label={"Full Name*"} placeholder={"Enter Your name"} className={"mt-4"}>
             <BsPerson size={25}/>
           </Input>
-          <Input label={"Phone Number*"} placeholder={"Enter Your number"} className={"mt-4"}>
+          <Input label={"Email*"} placeholder={"Enter Your email"} className={"mt-4"}>
             <HiOutlineMail size={25} />
           </Input>
         </div>

@@ -15,7 +15,7 @@ const Parallax = ({ type }) => {
   return (
     <div className="parallax max-sm:hidden flex items-center  justify-center relative overflow-hidden h-[50vh] md:h-screen  mt-32" ref={ref}>
       <motion.h1 className="h1-primary " style={{ y: yText }}>
-        What We Did?
+      Explore My Projects.
       </motion.h1>
       <motion.img
         src="/mountains.png"
