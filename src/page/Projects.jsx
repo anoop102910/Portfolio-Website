@@ -13,7 +13,7 @@ let cardDetails = [
     name: "Socially",
     about:
       " Discover my MERN-based social media platform. Share posts, connect with friends, and enjoy real-time interactions.",
-    imageLink: "/socially.png",
+    imageLink: "socially.webp",
     gitLink: "https://github.com/anoop102910/Socially_MERN",
     reverse: false,
     websiteLink: "https://socially-fftw.onrender.com/",
@@ -22,7 +22,7 @@ let cardDetails = [
   {
     name: "AnimeHub",
     about: "Discover anime joy on my Next.js site with infinite loading and server-side rendering",
-    imageLink: "/animehub.png",
+    imageLink: "animehub.webp",
     gitLink: "https://github.com/anoop102910/AnimeHub",
     reverse: true,
     websiteLink: "https://animehub-102910.vercel.app/",
@@ -33,7 +33,7 @@ let cardDetails = [
     name: "Sidcup Clone Website",
     about:
       "Visit my website clone of Sidcup, showcasing captivating scrolling animations and the best available web animations.",
-    imageLink: "sidcup.png",
+    imageLink: "sidcup.webp",
     gitLink: "https://github.com/anoop102910/Sidcup-website-clone",
     reverse: false,
     websiteLink: "https://responsive-sidcup-clone.netlify.app/",
@@ -43,7 +43,7 @@ let cardDetails = [
     name: "Design to Code",
     about:
       "Witness the seamless fusion of creativity and functionality as Figma designs come to life in the realm of web development.",
-    imageLink: "beccas.png",
+    imageLink: "beccas.webp",
     gitLink: "https://github.com/anoop102910/Sidcup-website-clone",
     reverse: true,
     websiteLink: "https://responsive-website-102910.netlify.app/",

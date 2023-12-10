@@ -44,7 +44,7 @@ function About() {
           // viewport={{amount:0.1}}
           id="about-image"
           className="w-[70%] mx-auto md:w-[400px]  md:block h-auto scroll-trigger-left"
-          src={"profile.png"}
+          src={"profile.webp"}
           alt=""
         />
         <motion.div
@@ -57,16 +57,16 @@ function About() {
           <p>
             Hello there!{" "}
             <span>
-              <img className="w-12  inline" src="hi.png" alt="" />
+              <img width={40} height={"auto"} className="w-10 inline" src="hi.svg" alt="" />
             </span>{" "}
             I'm Anoop Singh, a passionate and aspiring web developer{" "}
             <span>
-              <img className="w-12  inline" src="comp-emoji.png" alt="" />
+              <img width={40} className="w-10  inline" src="coding.png" alt="" />
             </span>{" "}
             currently pursuing my B.Tech in Computer Science and Engineering at Bundelkhand
             Institute of Engineering and Technology in Jhansi
             <span>
-              <img className="w-12 ml-2  inline" src="college.png" alt="" />
+              <img width={40} className="w-10 ml-2  inline" src="college.svg" alt="" />
             </span>{" "}
             , Uttar Pradesh.
           </p>

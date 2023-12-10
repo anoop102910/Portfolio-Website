@@ -1,7 +1,4 @@
-import React, { useRef } from "react";
-import { motion, useInView } from "framer-motion";
-import { BsBoxArrowInLeft } from "react-icons/bs";
-import { backInRightVariant } from "../utils/animation_variants";
+import { motion } from "framer-motion";
 
 const educationData = [
   {
@@ -25,16 +22,15 @@ const educationData = [
 ];
 
 function Education() {
-  const ref = useRef();
 
   return (
-    <div ref={ref} id="education" className="mt-32 ">
+    <div  id="education" className="mt-32 ">
       <h1 className="h1-primary scroll-top  ">Education</h1>
       <motion.div
         // variants={backInRightVariant}
-        initial="hidden"
-        whileInView={"visible"}
-        viewport={{ margin: "-130px 0px 0px 0px" }}
+        // initial="hidden"
+        // whileInView={"visible"}
+        // viewport={{ margin: "-130px 0px 0px 0px" }}
         className="mt-20 md:flex flex-1 justify-between gap-x-4 "
       >
         {educationData.map((item, index) => (

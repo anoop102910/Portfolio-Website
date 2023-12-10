@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-const Parallax = ({ type }) => {
+const Parallax = () => {
   const ref = useRef();
 
   const { scrollYProgress } = useScroll({
@@ -18,11 +18,11 @@ const Parallax = ({ type }) => {
       Explore My Projects.
       </motion.h1>
       <motion.img
-        src="/mountains.png"
+        src="mountains.webp"
         className="w-full  overflow-hidden object-cover object-center absolute z-10"
       ></motion.img>
       <motion.img src="/planets.png" className="absolute -top-32" style={{y:yBg}}></motion.img>
-      <motion.img src="/stars.png" className="stars absolute top-0 left-0"></motion.img>
+      <motion.img src="/stars.webp" className="stars absolute top-0 left-0"></motion.img>
     </div>
   );
 };

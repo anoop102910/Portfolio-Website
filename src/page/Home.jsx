@@ -1,12 +1,9 @@
-import React, { useEffect, useRef } from "react";
-import { easeInOut, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { imageVariant, slideVariants } from "../utils/animation_variants";
 function Home() {
-  const app = useRef();
 
   return (
     <section
-      ref={app}
       id="home"
       className="flex flex-1 flex-col md:flex-row  md:mt-10 justify-between relative"
     >
