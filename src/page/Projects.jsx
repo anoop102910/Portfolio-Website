@@ -1,11 +1,12 @@
 import React, { useRef } from "react";
 import { BsFillArrowUpRightCircleFill } from "react-icons/bs";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Chip from "../components/Chip";
 import {
   backInBottomVariant,
   backInLeftVariant,
   backInRightVariant,
+  bottomInUpVariant,
 } from "../utils/animation_variants";
 
 let cardDetails = [
@@ -52,7 +53,6 @@ let cardDetails = [
 ];
 
 function Projects() {
-  const ref = useRef();
   return (
     <motion.div id="projects" className="w-full relative mt-32">
       <motion.h1
@@ -74,17 +74,27 @@ function Projects() {
 
 function Card({ card }) {
   let { name, about, imageLink, gitLink, reverse, websiteLink, techStack } = card;
+
+  const ref = useRef();
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "start center "],
+  });
+  const s = useTransform(scrollYProgress, [0, 1], [0, 1]);
+  let x;
+  if (reverse) x = useTransform(scrollYProgress, [0, 1], [200, 0]);
+  else x = useTransform(scrollYProgress, [0, 1], [-200, 0]);
+
   return (
-    <div
+    <motion.div
       className={`mt-32 md:mb-52 flex flex-col gap-y-10 md:flex-row items-center gap-x-16 ${
         reverse && "md:flex-row-reverse"
       }`}
     >
       <motion.div
-        // variants={backInLeftVariant}
-        initial="hidden"
-        whileInView="visible"
-        className="md:w-[45%] relative card-image"
+        ref={ref}
+        style={{ scale: s }}
+        className="md:w-[45% h-[200px] md:h-[260px] relative"
       >
         <BsFillArrowUpRightCircleFill
           size={35}
@@ -99,18 +109,13 @@ function Card({ card }) {
         />
         <a target="_blank" href={websiteLink}>
           <img
-            className="w-full h-[200px] md:h-[300px] object-cover object-center rounded-lg cursor-pointer hover:scale-[1.03] hover:shadow-lg hover:shadow-violet-900  transition duration-700 "
+            className="w-full h-full object-cover object-center rounded-lg cursor-pointer hover:scale-[1.03] hover:shadow-lg hover:shadow-violet-900  transition duration-300 "
             src={imageLink}
             alt=""
           />
         </a>
       </motion.div>
-      <motion.div
-        // variants={backInRightVariant}
-        initial="hidden"
-        whileInView={"visible"}
-        className="card-content md:w-1/2"
-      >
+      <motion.div style={{ x: x }} className="card-content md:w-1/2">
         <h2 className="text-5xl font-bold">{name}</h2>
         <p className="mt-5 leading-8 text-gray-200">{about}</p>
         <div className="mt-4">
@@ -125,7 +130,7 @@ function Card({ card }) {
           </a>
         </div>
       </motion.div>
-    </div>
+    </motion.div>
   );
 }
 export default Projects;
