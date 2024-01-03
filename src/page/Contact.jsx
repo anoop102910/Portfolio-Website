@@ -62,7 +62,8 @@ function MessageForm() {
   }
   return (
     <div className="glass-effect mx-auto mt-10 w-full md:w-auto">
-      <form className="mx-auto w-full lg:w-[550px]" action="">
+      <form action="https://api.web3forms.com/submit" method="POST" className="mx-auto w-full lg:w-[550px]" action="">
+        <input type="hidden" name="access_key" value="d2852544-bcd1-4596-94eb-de4ed9e638a2">
         <div className="mt-8 flex gap-10 flex-col lg:flex-row">
           <Input type="number" label={"Full Name*"} placeholder={"Enter Your name"} className={"mt-4"}>
             <BsPerson size={25}/>
