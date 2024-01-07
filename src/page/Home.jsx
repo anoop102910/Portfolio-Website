@@ -32,13 +32,13 @@ function Home() {
           </h3>
         </motion.div>
       </motion.div>
-      <motion.div className="md:absolute top-0  -z-10 relative  right-[4px]">
+      <motion.div className="md:absolute -top-10  -z-10 relative  right-[4px]">
         <motion.img
           variants={imageVariant}
           initial="hidden"
           animate="visible"
-          className="top-0 left-0 animate-float"
-          src="profile_anime.svg"
+          // className="animate-float"
+          src="programmer.png"
           alt=""
         />
       </motion.div>

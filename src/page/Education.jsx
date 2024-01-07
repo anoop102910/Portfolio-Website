@@ -24,9 +24,9 @@ const educationData = [
 
 function Education() {
   return (
-    <div id="education" className="mt-32 ">
+    <div id="education" className="mt-32 relative">
       <motion.h1 className="h1-primary">Education</motion.h1>
-      <motion.div className="mt-20 md:flex flex-1 justify-between gap-x-4 ">
+      <motion.div className="mt-20 md:flex flex-1 justify-between gap-x-4">
         {educationData.map((item, index) => (
           <motion.div
             key={index}
@@ -39,6 +39,8 @@ function Education() {
           </motion.div>
         ))}
       </motion.div>
+      <img src="fire1.png"  className="absolute opacity-50 -right-32 -bottom-32 -z-10" alt="" />
+
     </div>
   );
 }

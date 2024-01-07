@@ -2,12 +2,7 @@ import React, { useRef } from "react";
 import { BsFillArrowUpRightCircleFill } from "react-icons/bs";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Chip from "../components/Chip";
-import {
-  backInBottomVariant,
-  backInLeftVariant,
-  backInRightVariant,
-  bottomInUpVariant,
-} from "../utils/animation_variants";
+import { backInBottomVariant } from "../utils/animation_variants";
 
 let cardDetails = [
   {
@@ -19,6 +14,7 @@ let cardDetails = [
     reverse: false,
     websiteLink: "https://socially-fftw.onrender.com/",
     techStack: ["React.js", "MongoDB", "Express.js"],
+    videoLink: "https://youtu.be/YOz10PSunp8",
   },
   {
     name: "AnimeHub",
@@ -54,10 +50,17 @@ let cardDetails = [
 
 function Projects() {
   return (
-    <motion.div id="projects" className="w-full relative mt-32">
+    <motion.div id="projects" className="w-full relative mt-32 ">
+      <img
+        src="laptop.png"
+        width={400}
+        className="absolute max-sm:hidden opacity-5 -left-20 -top-20"
+        alt=""
+      />
       <motion.h1
         variants={backInBottomVariant}
         whileInView="visible"
+        viewport={{ once: true }}
         initial="hidden"
         className="h1-primary md:mb-52"
       >
@@ -73,7 +76,7 @@ function Projects() {
 }
 
 function Card({ card }) {
-  let { name, about, imageLink, gitLink, reverse, websiteLink, techStack } = card;
+  let { name, about, imageLink, gitLink, reverse, websiteLink, techStack, videoLink } = card;
 
   const ref = useRef();
   const { scrollYProgress } = useScroll({
@@ -128,6 +131,11 @@ function Card({ card }) {
           <a target="_blank" className="hover:scale-110 transition duration-500" href={gitLink}>
             <img width={54} src="github.svg" alt="" />
           </a>
+          {videoLink && (
+            <a target="_blank" href="https://youtu.be/YOz10PSunp8">
+              <img src="youtube.svg" width={54} alt="" />
+            </a>
+          )}
         </div>
       </motion.div>
     </motion.div>
