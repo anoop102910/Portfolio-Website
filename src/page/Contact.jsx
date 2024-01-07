@@ -50,19 +50,31 @@ function DetailCard({ children, label, value }) {
   );
 }
 function MessageForm() {
-  const sendEmail = (e) => {
-    e.preventDefault();
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
 
-    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
-  }
+    formData.append("access_key", "d2852544-bcd1-4596-94eb-de4ed9e638a2");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: json
+    }).then((res) => res.json());
+
+    if (res.success) {
+      console.log("Success", res);
+    }
+  };
   return (
     <div className="glass-effect mx-auto mt-10 w-full md:w-auto">
-      <form className="mx-auto w-full lg:w-[550px]" action="">
+      <form onSubmit={onSubmit} className="mx-auto w-full lg:w-[550px]" action="">
         <div className="mt-8 flex gap-10 flex-col lg:flex-row">
           <Input type="number" label={"Full Name*"} placeholder={"Enter Your name"} className={"mt-4"}>
             <BsPerson size={25}/>
