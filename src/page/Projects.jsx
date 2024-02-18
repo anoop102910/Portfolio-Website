@@ -37,14 +37,14 @@ let cardDetails = [
     techStack: ["Html", "Css", "GSAP"],
   },
   {
-    name: "Design to Code",
+    name: "Yumyard",
     about:
       "Witness the seamless fusion of creativity and functionality as Figma designs come to life in the realm of web development.",
-    imageLink: "beccas.webp",
-    gitLink: "https://github.com/anoop102910/Sidcup-website-clone",
+    imageLink: "yumyard-food.webp",
+    gitLink: "https://github.com/anoop102910/yumyard-food-website",
     reverse: true,
-    websiteLink: "https://responsive-website-102910.netlify.app/",
-    techStack: ["Html", "Css", "React.js"],
+    websiteLink: "https://yumyard-food.netlify.app/",
+    techStack: ["Html", "Tailwind", "React", "Shadcn"],
   },
 ];
 
