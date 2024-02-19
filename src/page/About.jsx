@@ -29,7 +29,7 @@ const stackData = [
 
 function About() {
   return (
-    <section id="about" className="md:about w-full mt-32 md:mt-64 relative ">
+    <section id="about" className="w-full mt-32 md:mt-64 relative ">
       <motion.h1
         variants={bottomInUpVariant}
         initial="hidden"
@@ -45,19 +45,15 @@ function About() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="flex mt-5 md:mt-20 items-start flex-col md:flex-row md:items-center gap-x-20"
+        className="flex mt-20 items-start sm:items-center flex-col sm:flex-row md:items-center gap-x-20"
       >
-        <motion.img
+        <motion.img 
           id="about-image"
-          className="w-[70%] mx-auto md:w-[400px]  md:block h-auto scroll-trigger-left"
-          src={"profile.webp"}
+          className="w-[70%] mx-auto sm:w-[300px] md:w-[400px] rounded-lg  md:block h-auto scroll-trigger-left"
+          src={"profile.jpg"}
           alt=""
         />
         <motion.div
-          variants={bottomInUpVariant}
-          initial="hidden"
-          whileInView={"visible"}
-          viewport={{ once: true }}
           id="about-para"
           className="lg:ml-20 md:ml-10 mt-10 text-gray-300 scroll-trigger-right max-sm:text-center"
         >

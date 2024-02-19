@@ -50,7 +50,7 @@ let cardDetails = [
 
 function Projects() {
   return (
-    <motion.div id="projects" className="w-full relative mt-32 ">
+    <motion.div id="projects" className="w-full relative mt-32  ">
       <img
         src="laptop.png"
         width={400}
@@ -62,7 +62,7 @@ function Projects() {
         whileInView="visible"
         viewport={{ once: true }}
         initial="hidden"
-        className="h1-primary md:mb-52"
+        className="h1-primary md:mb-52 max-md:text-center"
       >
         My Projects
       </motion.h1>
@@ -90,14 +90,14 @@ function Card({ card }) {
 
   return (
     <motion.div
-      className={`mt-32 md:mb-52 flex flex-col gap-y-10 md:flex-row items-center gap-x-16 ${
+      className={`mt-32 md:mb-52 mx-auto flex flex-col gap-y-10 md:flex-row items-center gap-x-16 max-md:max-w-lg ${
         reverse && "md:flex-row-reverse"
       }`}
     >
       <motion.div
         ref={ref}
         style={{ scale: s }}
-        className="md:w-[45% h-[200px] md:h-[260px] relative"
+        className="md:w-[45%] h-[200px] md:h-[260px] relative"
       >
         <BsFillArrowUpRightCircleFill
           size={35}

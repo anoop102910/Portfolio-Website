@@ -1,29 +1,40 @@
 import { motion } from "framer-motion";
 import { imageVariant, slideVariants } from "../utils/animation_variants";
 function Home() {
-
   return (
     <section
       id="home"
-      className="flex flex-1 flex-col md:flex-row  md:mt-10 justify-between relative"
+      className="flex flex-1 flex-col sm:flex-row  md:mt-10 justify-between relative"
     >
       <motion.div
-        transition={{ duration: 2.1, staggerChildren: 0.7, ease: "easeInOut" }}
-        variants={slideVariants}
-        animate="visible"
-        initial="hidden"
+        // transition={{ duration: 2.1,staggerChildren:0.7}}
+        // variants={slideVariants}
+        // animate="visible"
+        // initial="hidden"
+       /*  animate={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, x: -1000 }}
+        transition={{ staggerChildren: 0.7, duration: 2.1 }} */
       >
         <motion.h1
-          variants={slideVariants}
+          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: -1000 }}
+          transition={{ duration: 0.6,ease:"easeInOut" }}
           className="mt-20 text-2xl  md:text-3xl overflow-hidden   text-gray-400 uppercase whitespace-nowrap break-words font-playfair font-bold tracking-wider"
         >
           I am a <span className="text-green-500 ">web developer</span>
         </motion.h1>
-        <motion.h2 variants={slideVariants} className="h1-primary animate-bottom">
+        <motion.h2
+          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: -1000 }}
+          transition={{ delay:0.4, duration: 0.6,ease:"easeInOut" }}
+          className="h1-primary animate-bottom"
+        >
           Anoop Singh
         </motion.h2>
         <motion.div
-          variants={slideVariants}
+          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: -1000 }}
+          transition={{ delay:0.8, duration: 0.6,ease:"easeInOut" }}
           className="mt-16 flex items-center z-20 gap-x-4 animate-bottom"
         >
           <hr className="w-[0.1rem] h-[100px] border bg3 border-red-500" />
@@ -37,7 +48,6 @@ function Home() {
           variants={imageVariant}
           initial="hidden"
           animate="visible"
-          // className="animate-float"
           src="programmer.png"
           alt=""
         />

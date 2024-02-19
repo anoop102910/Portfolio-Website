@@ -1,5 +1,5 @@
-import Navbar from "./components/Navbar"
-import Footer from "./components/Footer"
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import Home from "./page/Home";
 import About from "./page/About";
 import Projects from "./page/Projects";
@@ -10,7 +10,6 @@ import { motion } from "framer-motion";
 import Parallax from "./page/Parallex";
 
 export default function Layout() {
-
   return (
     <>
       <motion.div
@@ -19,20 +18,20 @@ export default function Layout() {
         transition={{ duration: 2 }}
         className="max-sm:p-4 overflow-y-hidden"
       >
-        <Navbar />
-        <div className="px-1 lg:px-[10%]">
+        <div className="sm:px-10 lg:px-[10%]">
+          <Navbar />
+
           <Home />
           <About />
           <Education />
         </div>
-          <Parallax />
-        <div className="px-1 lg:px-[10%]">
+        <Parallax />
+        <div className="sm:px-10 lg:px-[10%]">
           <Skills />
           <Projects />
           <Contact />
         </div>
         <Footer />
-
       </motion.div>
     </>
   );

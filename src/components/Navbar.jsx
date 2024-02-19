@@ -3,14 +3,12 @@ import DropdownToggleBar from "./DropdownToggleBar";
 
 function Navbar() {
   return (
-    <header className="mx-auto md:px-12 h-[3.7rem] flex items-center rounded-full mt-3 animate-opacity z-[3000]">
+    <header className="mx-auto  h-[3.7rem] flex items-center rounded-full mt-3 animate-opacity z-[3000]">
       <div className="flex justify-between items-center w-full ">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-x-4">
             <span className="text-2xl font-extrabold font-roboto">
-              {/* <img className="w-10 inline" src="/logo.png" alt="" /> */}
-              <span className="font-bungee bg-gradient-to-b from-blue-500 to-green-500 text-transparent bg-clip-text text-[2rem] mr-[2px]">A</span>
-              <span>noop Singh</span>
+              <img width={100} src="logo.webp" alt="" />
            
             </span>
           </div>
