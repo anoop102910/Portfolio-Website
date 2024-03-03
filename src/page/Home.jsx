@@ -6,19 +6,11 @@ function Home() {
       id="home"
       className="flex flex-1 flex-col sm:flex-row  md:mt-10 justify-between relative"
     >
-      <motion.div
-        // transition={{ duration: 2.1,staggerChildren:0.7}}
-        // variants={slideVariants}
-        // animate="visible"
-        // initial="hidden"
-       /*  animate={{ opacity: 1, x: 0 }}
-        initial={{ opacity: 0, x: -1000 }}
-        transition={{ staggerChildren: 0.7, duration: 2.1 }} */
-      >
+      <motion.div>
         <motion.h1
           animate={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: -1000 }}
-          transition={{ duration: 0.6,ease:"easeInOut" }}
+          transition={{ duration: 0.6, ease: "easeInOut" }}
           className="mt-20 text-2xl  md:text-3xl overflow-hidden   text-gray-400 uppercase whitespace-nowrap break-words font-playfair font-bold tracking-wider"
         >
           I am a <span className="text-green-500 ">web developer</span>
@@ -26,7 +18,7 @@ function Home() {
         <motion.h2
           animate={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: -1000 }}
-          transition={{ delay:0.4, duration: 0.6,ease:"easeInOut" }}
+          transition={{ delay: 0.4, duration: 0.6, ease: "easeInOut" }}
           className="h1-primary animate-bottom"
         >
           Anoop Singh
@@ -34,7 +26,7 @@ function Home() {
         <motion.div
           animate={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: -1000 }}
-          transition={{ delay:0.8, duration: 0.6,ease:"easeInOut" }}
+          transition={{ delay: 0.8, duration: 0.6, ease: "easeInOut" }}
           className="mt-16 flex items-center z-20 gap-x-4 animate-bottom"
         >
           <hr className="w-[0.1rem] h-[100px] border bg3 border-red-500" />

@@ -8,6 +8,7 @@ import Skills from "./page/Skills";
 import Education from "./page/Education";
 import { motion } from "framer-motion";
 import Parallax from "./page/Parallex";
+// import { SparklesPreview } from "./components/SparklesPreview";
 
 export default function Layout() {
   return (
@@ -20,8 +21,7 @@ export default function Layout() {
       >
         <div className="sm:px-10 lg:px-[10%]">
           <Navbar />
-
-          <Home />
+            <Home />
           <About />
           <Education />
         </div>

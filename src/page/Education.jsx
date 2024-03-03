@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { bottomInUpVariant } from "../utils/animation_variants";
+import { useEffect } from "react";
 
 const educationData = [
   {
@@ -22,11 +23,28 @@ const educationData = [
   },
 ];
 
+
+
 function Education() {
+
   return (
     <div id="education" className="mt-32 relative">
-      <motion.h1 className="h1-primary max-md:text-center">Education</motion.h1>
-      <motion.div className="mt-20 md:flex flex-1 justify-between gap-x-4 max-md:max-w-lg max-md:mx-auto">
+      <motion.h1
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+        className="h1-primary max-md:text-center"
+      >
+        Education
+      </motion.h1>
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+        className="mt-20 md:flex flex-1 justify-between gap-x-4 max-md:max-w-lg max-md:mx-auto"
+      >
         {educationData.map((item, index) => (
           <motion.div
             key={index}
@@ -39,8 +57,7 @@ function Education() {
           </motion.div>
         ))}
       </motion.div>
-      <img src="fire1.png"  className="absolute opacity-50 -right-32 -bottom-32 -z-10" alt="" />
-
+      <img src="fire1.png" className="absolute opacity-50 -right-32 -bottom-32 -z-10" alt="" />
     </div>
   );
 }

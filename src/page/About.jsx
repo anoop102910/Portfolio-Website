@@ -1,50 +1,24 @@
-import React, { useRef } from "react";
-import { motion, useInView } from "framer-motion";
-import {
-  backInLeftVariant,
-  bottomInUpVariant,
-  backInRightVariant,
-  backInLeftVariants,
-  imageVariant,
-  backInBottomVariant,
-} from "../utils/animation_variants";
-const stackData = [
-  {
-    category: "Frontend",
-    items: ["HTML", "CSS", "JavaScript", "React.js"],
-  },
-  {
-    category: "Backend",
-    items: ["Node.js", "Express.js"],
-  },
-  {
-    category: "Database",
-    items: ["MongoDB"],
-  },
-  {
-    category: "CSS Framework",
-    items: ["Tailwind CSS"],
-  },
-];
+import { motion} from "framer-motion";
+import toast from "react-hot-toast";
 
 function About() {
   return (
     <section id="about" className="w-full mt-32 md:mt-64 relative ">
       <motion.h1
-        variants={bottomInUpVariant}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
+        initial={{opacity:0,y:100}}
+        whileInView={{opacity:1,y:0}}
+        transition={{duration:0.5}}
+        viewport={{once:true}}
         id="about-heading"
         className="h1-primary text-center scroll-trigger-top"
       >
         About me
       </motion.h1>
       <motion.div
-        variants={bottomInUpVariant}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
+        initial={{opacity:0,y:100}}
+        whileInView={{opacity:1,y:0}}
+        transition={{duration:0.5}}
+        viewport={{once:true}}
         className="flex mt-20 items-start sm:items-center flex-col sm:flex-row md:items-center gap-x-20"
       >
         <motion.img 
