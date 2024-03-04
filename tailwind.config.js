@@ -8,6 +8,7 @@ export default {
         roboto: "Roboto",
         playfair: "Playfair Display",
         bungee: "Bungee Spice",
+        salsa:"Salsa"
       },
       colors: {
         primary: {

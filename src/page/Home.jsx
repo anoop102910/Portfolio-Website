@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import { imageVariant, slideVariants } from "../utils/animation_variants";
+import Lottie from "lottie-react";
+import animationData from "../assets/hero.json";
 function Home() {
   return (
     <section
@@ -30,19 +32,20 @@ function Home() {
           className="mt-16 flex items-center z-20 gap-x-4 animate-bottom"
         >
           <hr className="w-[0.1rem] h-[100px] border bg3 border-red-500" />
-          <h3 className="w-[200px] text-gray-300 ">
+          <h3 className="w-[200px] text-gray-300 font-salsa">
             "I am passionate about web development and dedicated to honing my skills in this field."
           </h3>
         </motion.div>
       </motion.div>
-      <motion.div className="md:absolute -top-10  -z-10 relative  right-[4px]">
-        <motion.img
+      <motion.div className="md:absolute  top-1 -right-32  -z-10  ">
+        <motion.div
           variants={imageVariant}
           initial="hidden"
           animate="visible"
-          src="programmer.png"
-          alt=""
-        />
+          className="w-full  md:w-[40rem]"
+        >
+          <Lottie animationData={animationData} />
+        </motion.div>
       </motion.div>
     </section>
   );

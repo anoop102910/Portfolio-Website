@@ -16,6 +16,8 @@
     "@fontsource/pacifico": "^5.0.8",
     "@fontsource/playfair-display": "^5.0.18",
     "@fontsource/roboto": "^5.0.8",
+    "@fontsource/salsa": "^5.0.18",
+    "@iconify/react": "^4.1.1",
     "@tsparticles/engine": "^3.2.2",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.2.2",

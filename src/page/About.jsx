@@ -23,7 +23,7 @@ function About() {
       >
         <motion.img 
           id="about-image"
-          className="w-[70%] mx-auto sm:w-[300px] md:w-[400px] rounded-lg  md:block h-auto scroll-trigger-left"
+          className="w-[70%] mx-auto sm:w-[300px] md:w-[360px] rounded-lg  md:block h-auto scroll-trigger-left"
           src={"profile.jpg"}
           alt=""
         />
