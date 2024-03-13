@@ -3,7 +3,7 @@ import React from "react";
 function Footer() {
   return (
     <div className="mt-32 ">
-      <div id="footer" className="flex items-center gap-x-10 mx-auto w-min">
+      <div id="footer" className="flex items-center gap-x-10 mx-auto w-min max-sm:w-full">
         <a target="1" className="w-20" href="https://github.com/anoop102910?tab=repositories">
           <img  src="github.png" alt="" />
         </a>
