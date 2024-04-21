@@ -96,7 +96,7 @@ export default function ProjectCard({ card }) {
               <img width={54} src="github.svg" alt="" />
             </a>
             {videoLink && (
-              <a target="_blank" href="https://youtu.be/YOz10PSunp8">
+              <a target="_blank" href={videoLink}>
                 <img src="youtube.svg" width={54} alt="" />
               </a>
             )}
